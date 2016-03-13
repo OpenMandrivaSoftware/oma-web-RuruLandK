@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+  <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+  <title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+  <INCLURE{fond=inclure/head} />
+</head>
+<body> <!--onload="Materialize.fadeInImage('#image-oma')"-->
+
+  <INCLURE{fond=inclure/navbar} />
+<!--  <div id="index-banner" class="parallax-container" style="padding-top=100px;padding-bottom=100px;">-->
+
+    <div class="section no-pad-bot" style="background:#235071 url('#CHEMIN{img/bg.jpg}');background-size:cover;padding:100px 0 100px;">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l6">
+              <img id="image-oma" class="responsive-img" alt="OpenMandriva 3" src="#CHEMIN{img/om-a01.jpg}" />
+          </div>
+          <div class="col s12 l6 right-align">
+            <div class="section">
+              <h1 class="truncate header blue-text text-lighten-4">Here comes</h1>
+              <h1 class="truncate header blue-text text-lighten-4">Lx 3</h1>
+            </div>
+              <div class="divider"></div>
+            <div class="section">
+              <h5 class="header light flow-text blue-text text-lighten-4">We proudly present our new OpenMandriva Lx release, long awaited, but faster than ever!
+            </div>
+            <div class="section">
+              <a href="#" id="download-button" class="btn-large waves-effect waves-light omacolordl"><h5>Download</h5></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="Unsplashed background img 1"></div>
+  </div>-->
+
+
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">developer_board</i></h2>
+            <h5 class="center">——DEVS—— WANDBOARD</h5>
+
+            <p class="light">armv7 image for wandboard.org OpenMandriva added as officialy supported distro to wandboard download page. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center green-text text-accent-4"><i class="material-icons">explore</i></h2>
+            <h5 class="center">——USERS——<br /> TOUR</h5>
+
+            <p class="light">Explore OpenMandriva Features, discover its secrets</p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center amber-text"><i class="material-icons">games</i></h2>
+            <h5 class="center">——PLAYERS—— GAMES</h5>
+
+            <p class="light">Love games? Even Windows games work well on OMA! Check it out here. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center orange-text text-accent-4"><i class="material-icons">child_care</i></h2>
+            <h5 class="center">——DUMMIES—— GUIDE</h5>
+
+            <p class="light">New here? Discover it simple, with our Guide for newbies!. </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A delicious Linux Recipe. Fun flavoured.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="#CHEMIN{img/dark.png}" alt="Unsplashed background img 2"></div>
+  </div>-->
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="large grey-text text-darken-1 material-icons">people_outline</i></h3>
+          <h4>The OpenMandriva Association</h4>
+          <p class="light flow-text grey-text text-darken-1">The OpenMandriva Association's goal is to develop a pragmatic distribution that provides the best user experience for everyone, from newbies to developers. We will achieve our objectives for the best balance between the most modern features and stability.</p>
+          <p class="light flow-text grey-text text-darken-1">Our roots are in Mandrake and its traditions, we are a worldwide community of people who are passionate about free software working together and take our technical and strategic decisions in a collaborative manner. We do not just build a Linux distro, we exchange knowledge and make new friends. Welcome to OpenMandriva Community! Click here to know who are us and what we are doing. </p>
+          #MENU_LANG
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"><a class="grey-text text-darken-4" href="#"><strong>ABF the future of build systems</strong></a></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="#CHEMIN{img/Sunrays.jpeg}" alt="Unsplashed background img 3"></div>
+  </div>-->
+
+  <!--  Footer -->
+
+      <INCLURE{fond=inclure/footer,self=#SELF} />
+
+</body>
+</html>
