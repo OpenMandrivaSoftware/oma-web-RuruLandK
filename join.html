@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+  <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+  <title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+  <INCLURE{fond=inclure/head} />
+</head>
+<body> <!--onload="Materialize.fadeInImage('#image-oma')"-->
+  <INCLURE{fond=inclure/navbar} />
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Join</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="Unsplashed background img 2"></div>
+  </div>
+
+
+  <main class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-1">Join</span>
+            <p>So you really like OpenMandriva Lx and are eager to help? You can contribute in various ways. By</p>
+              <ul class="collection">
+                <li class="collection-item avatar">
+                  <img src="images/yuna.jpg" alt="" class="circle">
+                  <span class="title">Discussing</span>
+                  <p>start answering  questions and helping others on the forum</p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle">folder</i>
+                  <span class="title">Publishing</span>
+                  <p>Start translating blog posts and websites<br>
+                    correct mistakes
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle green">insert_chart</i>
+                  <span class="title">Getting involved</span>
+                  <p>join one or more teams — devel, workshop, artwork, infra</p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle red">play_arrow</i>
+                  <span class="title">Donating</span>
+                  <p>Support us with donation
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+              </ul>
+                <p>The Job Centre is the central place for all positions within the OpenMandriva distribution. From painters to packages, testers to translators, you may find all available positions within the distribution here, and where to find more information on how to help.</p>
+
+<h5>Mailing Lists and IRC</h5>
+
+<p>Keep yourself updated with the latest happenings in the various departments of OpenMandriva, viz. Cooker, Workshop, Council, Artwork, and more. We also have an active presence on our IRC channel #openmandriva-cooker at freenode.net.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <INCLURE{fond=inclure/footer,self=#SELF} />
+  </body>
+  </html>
