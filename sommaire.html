@@ -1,3 +1,12 @@
+[(#REM) This is a comment in SPIP http://www.spip.net/en_article5045.html
+This comment will close at the next closing bracket.
+The folder "squelette" contains the SPIP template.
+http://www.spip.net/en_rubrique57.html
+sommaire.html is the default page SPIP will look for if nothing is specified.
+SPIP uses tags and loops quite easy to understand.
+Any tag can be easily found in the search field here:
+http://www.spip.net/en_article150.html
+]
 <!DOCTYPE html>
 [(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
@@ -7,15 +16,14 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
   <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
-  <title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+  <title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)</title>
   [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+  [(#REM) Call for inclure/head.html]
   <INCLURE{fond=inclure/head} />
 </head>
-<body> <!--onload="Materialize.fadeInImage('#image-oma')"-->
+<body>
 
   <INCLURE{fond=inclure/navbar} />
-<!--  <div id="index-banner" class="parallax-container" style="padding-top=100px;padding-bottom=100px;">-->
-
     <div class="section no-pad-bot" style="background:#235071 url('#CHEMIN{img/bg.jpg}');background-size:cover;padding:100px 0 100px;">
       <div class="container">
         <div class="row">
@@ -38,8 +46,6 @@
         </div>
       </div>
     </div>
-    <!--<div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="Unsplashed background img 1"></div>
-  </div>-->
 
 
 
@@ -90,18 +96,6 @@
     </div>
   </div>
 
-
-  <!--<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A delicious Linux Recipe. Fun flavoured.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="#CHEMIN{img/dark.png}" alt="Unsplashed background img 2"></div>
-  </div>-->
-
   <div class="container">
     <div class="section">
       <div class="row">
@@ -114,20 +108,6 @@
       </div>
     </div>
   </div>
-
-
-  <!--<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"><a class="grey-text text-darken-4" href="#"><strong>ABF the future of build systems</strong></a></h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="#CHEMIN{img/Sunrays.jpeg}" alt="Unsplashed background img 3"></div>
-  </div>-->
-
-  <!--  Footer -->
 
       <INCLURE{fond=inclure/footer,self=#SELF} />
 
