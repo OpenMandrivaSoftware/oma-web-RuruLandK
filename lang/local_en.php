@@ -1,9 +1,15 @@
 <?php
-// This is a SPIP language file  
+// This is a SPIP language file
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
+
+
+   // Main page
+
+
+    // Donate
 
         // D
         'download_omlx' => 'Download<br />OpenMandriva Lx',
