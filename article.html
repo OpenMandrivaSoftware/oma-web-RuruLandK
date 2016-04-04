@@ -1,4 +1,4 @@
-<BOUCLE_principale(ARTICLES) {id_article}>
+<BOUCLE_main(ARTICLES) {id_article}>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 [(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
@@ -14,18 +14,17 @@
 	<INCLURE{fond=inclure/head} />
 </head>
 
-<body class="pas_surlignable page_article">
-
-	<INCLURE{fond=inclure/navbar,env} />
-	<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
+<body>
+	<INCLURE{fond=inclure/navbar} />
+	<div class="parallax-container omacolorbg">
+<!--    <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">#TITRE</h5>
+          <h1 class="header col s12 light page-title">#TITRE</h1>
         </div>
       </div>
-    </div>
-    <div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="Unsplashed background img 2"></div>
+    </div>-->
+    <div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="background"></div>
   </div>
 
   <main class="container">
@@ -39,7 +38,7 @@
 			</div>
 
 			[<div class="#EDIT{chapo}">(#CHAPO|image_reduire{672,*})</div>]
-			[<div class="#EDIT{texte}">(#TEXTE|image_reduire{672,*})</div>]
+			[<div class="#EDIT{texte}">(#TEXTE)</div>]
 
 			[<hr><p class="#EDIT{hyperlien}"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
 			[<div class="#EDIT{ps}"><hr>(#PS|image_reduire{672,*})</div>]
@@ -53,4 +52,4 @@
 	<INCLURE{fond=inclure/footer,self=#SELF} />
 </body>
 </html>
-</BOUCLE_principale>
+</BOUCLE_main>
