@@ -14,19 +14,9 @@
 	<INCLURE{fond=inclure/head} />
 </head>
 
-<body class="pas_surlignable page_article">
-
-	<INCLURE{fond=inclure/navbar,env} />
-	<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">#TITRE</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="#CHEMIN{img/bg.jpg}" alt="Unsplashed background img 2"></div>
-  </div>
+<body>
+	<INCLURE{fond=inclure/navbar} />
+	<INCLURE{fond=inclure/header} />
 
   <main class="container">
     <div class="row">
@@ -39,7 +29,7 @@
 			</div>
 
 			[<div class="#EDIT{chapo}">(#CHAPO|image_reduire{672,*})</div>]
-			[<div class="#EDIT{texte}">(#TEXTE|image_reduire{672,*})</div>]
+			[<div class="#EDIT{texte}">(#TEXTE)</div>]
 
 			[<hr><p class="#EDIT{hyperlien}"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
 			[<div class="#EDIT{ps}"><hr>(#PS|image_reduire{672,*})</div>]
