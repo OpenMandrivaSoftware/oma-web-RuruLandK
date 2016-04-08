@@ -16,10 +16,10 @@
 
 <body>
 	<INCLURE{fond=inclure/navbar} />
-	<header class="section no-pad-bot center-align" style="background:#235071 url('#CHEMIN{img/bg.jpg}');background-size:cover;padding:100px 0 100px;">
-		[<p class="#EDIT{surtitre} surtitre grey-text text-darken-3">(#SURTITRE)</p>]
-		<h1 class="#EDIT{titre} surlignable grey-text text-darken-3">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
-		[<p class="#EDIT{soustitre} soustitre grey-text text-darken-3">(#SOUSTITRE)</p>]
+	<header class="section omaheader center-align">
+		[<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
+		<h1 class="#EDIT{titre} titre surlignable">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
+		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
 	</header>
 	<INCLURE{fond=inclure/main,id_article} />
 	<INCLURE{fond=inclure/footer,self=#SELF} />
