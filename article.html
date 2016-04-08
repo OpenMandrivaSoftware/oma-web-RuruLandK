@@ -21,30 +21,7 @@
 		<h1 class="#EDIT{titre} surlignable grey-text text-darken-3">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
 		[<p class="#EDIT{soustitre} soustitre grey-text text-darken-3">(#SOUSTITRE)</p>]
 	</header>
-
-  <main class="container">
-    <div class="row">
-      <article class="col s12">
-		[(#REM) Contenu principal : contenu de l'article]
-
-			<aside>
-				[(#REM) Inclure le modele des liens de traductions ]
-				#MODELE{article_traductions}
-			</aside>
-
-			[<section class="#EDIT{chapo} chapo">(#CHAPO|image_reduire{672,*})</section>]
-			[<section class="#EDIT{texte} texte">(#TEXTE)</section>]
-
-			[<hr><p class="#EDIT{hyperlien}"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
-			[<section class="#EDIT{ps}"><hr>(#PS|image_reduire{672,*})</section>]
-
-			[<div class="notes"><hr />(#NOTES)</div>]
-
-			[(#REM) Gestion du portfolio et des documents ]
-			[(#INCLURE{fond=inclure/documents,id_article, env})]
-			</article>
-		</div><!--.col-->
-	</main>
+	<INCLURE{fond=inclure/main,id_article} />
 	<INCLURE{fond=inclure/footer,self=#SELF} />
 </body>
 </html>
