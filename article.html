@@ -38,6 +38,8 @@
 			[<hr><p class="#EDIT{hyperlien}"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
 			[<section class="#EDIT{ps}"><hr>(#PS|image_reduire{672,*})</section>]
 
+			[<div class="notes"><hr />(#NOTES)</div>]
+
 			[(#REM) Gestion du portfolio et des documents ]
 			[(#INCLURE{fond=inclure/documents,id_article, env})]
 			</article>
