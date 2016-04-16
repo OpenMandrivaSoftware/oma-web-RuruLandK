@@ -1,4 +1,4 @@
-<BOUCLE_main(ARTICLES) {id_article}>
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 [(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
@@ -10,22 +10,37 @@
 	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
 	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 	[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
-	[<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
+	[<link rel="canonical" href="(#URL_RUBRIQUE|url_absolue)" />]
 	<INCLURE{fond=inclure/head} />
+	[(#REM) Lien vers le flux RSS des articles la rubrique ]
+	<link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
 </head>
 
-<body>
+<body class="pas_surlignable">
 	<INCLURE{fond=inclure/navbar} />
-	<header class="section omaheader center-align">
-		[<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
-		<h1 class="#EDIT{titre} titre surlignable">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
-		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
+  <header class="section omaheader center-align">
+		<h1 class="#EDIT{titre} titre surlignable">[(#LOGO_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
 	</header>
-	<INCLURE{fond=inclure/breadcrumb_art,id_article} />
-	<INCLURE{fond=inclure/main,id_article} />
-	<INCLURE{fond=inclure/comment,id_article} />
+	<INCLURE{fond=inclure/breadcrumb_rub,id_rubrique} />
+
+  <div class="container">
+		[<section class="#EDIT{texte} texte surlignable chapo">(#TEXTE|image_reduire{672,*})</section>]
+      <ul class="collapsible" data-collapsible="accordion">
+        <BOUCLE_sous_rubriques(RUBRIQUES){id_parent}{par num titre}{!par date}>
+          <li>
+            <div class="collapsible-header"><h4>#TITRE</h4></div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <BOUCLE_art(ARTICLES){id_rubrique}{par num titre}{!par date}>
+                  <li class="collection-item"><a href="#URL_ARTICLE">#TITRE</a></li>
+                </BOUCLE_art>
+              </ul>
+            </div>
+          </li>
+        </BOUCLE_sous_rubriques>
+      </ul>
+  </div><!--.container-->
 	<INCLURE{fond=inclure/footer,self=#SELF} />
-	
 </body>
 </html>
-</BOUCLE_main>
+</BOUCLE_principale>

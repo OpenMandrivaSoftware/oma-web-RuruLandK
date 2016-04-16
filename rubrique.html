@@ -25,19 +25,10 @@
 
   <div class="container">
 		[<section class="#EDIT{texte} texte surlignable chapo">(#TEXTE|image_reduire{672,*})</section>]
-      <ul class="collapsible" data-collapsible="accordion">
-        <BOUCLE_sous_rubriques(RUBRIQUES){id_parent}{par num titre}{!par date}>
-          <li>
-            <div class="collapsible-header"><h4>#TITRE</h4></div>
-            <div class="collapsible-body">
-              <ul class="collection">
-                <BOUCLE_art(ARTICLES){id_rubrique}{par num titre}{!par date}>
-                  <li class="collection-item">#TITRE</li>
-                </BOUCLE_art>
-              </ul>
-            </div>
-          </li>
-        </BOUCLE_sous_rubriques>
+      <ul class="collection">
+        <BOUCLE_art(ARTICLES){id_rubrique}{par num titre}{!par date}>
+          <li class="collection-item"><a href="#URL_ARTICLE">#TITRE</a></li>
+        </BOUCLE_art>
       </ul>
   </div><!--.container-->
 	<INCLURE{fond=inclure/footer,self=#SELF} />
