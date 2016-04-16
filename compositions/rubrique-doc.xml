@@ -3,5 +3,5 @@
 	<description>Default composition for documentation section</description>
 	<icon>images/objet-liste-contenus-dates.png</icon>
 	<branche type="article" composition="doc" />
-	<branche type="rubrique" composition="doc" />
+	<branche type="rubrique" composition="-" />
 </composition>
