@@ -4,7 +4,7 @@
 		<div class="nav-wrapper">
 			<div class="col s12">
 	  		&nbsp;&nbsp;<a href="#URL_SITE_SPIP/" class="breadcrumb blue-text"><:accueil_site:></a>
-	  		<BOUCLE_fil(HIERARCHIE){id_article}>
+	  		<BOUCLE_fil(HIERARCHIE){id_article}{1,n}>
 	    		<a href="#URL_RUBRIQUE" class="breadcrumb blue-text">#TITRE</a>
 	  		</BOUCLE_fil>
 	    	[<strong class="breadcrumb blue-text">(#TITRE|couper{80})</strong>]
