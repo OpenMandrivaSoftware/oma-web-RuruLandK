@@ -1,0 +1,7 @@
+<composition>
+	<nom>Rubrique Doc</nom>
+	<description>Default composition for documentation section</description>
+	<icon>images/objet-liste-contenus-dates.png</icon>
+	<branche type="article" composition="doc" />
+	<branche type="rubrique" composition="doc" />
+</composition>
