@@ -21,17 +21,6 @@
 		<h1 class="#EDIT{titre} titre surlignable">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
 		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
 	</header>
-	<nav class="container white">
-		<div class="nav-wrapper black">
-			<div class="col s12">
-	  		<a href="#URL_SITE_SPIP/" class="breadcrumb"><:accueil_site:></a>
-	  		<BOUCLE_ariane(HIERARCHIE){id_article}>
-	    		<a href="#URL_RUBRIQUE" class="breadcrumb">#TITRE</a>
-	  		</BOUCLE_ariane>
-	    	[<strong class="breadcrumb">(#TITRE|couper{80})</strong>]
-			</div>
-		</div>
-	</nav>
 	<INCLURE{fond=inclure/main,id_article} />
 	<INCLURE{fond=inclure/comment,id_article} />
 	<INCLURE{fond=inclure/footer,self=#SELF} />
