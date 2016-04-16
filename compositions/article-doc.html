@@ -21,6 +21,7 @@
 		<h1 class="#EDIT{titre} titre surlignable">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
 		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
 	</header>
+	<INCLURE{fond=inclure/breadcrumb_art,id_article} />	
 	<INCLURE{fond=inclure/main,id_article} />
 	<INCLURE{fond=inclure/comment,id_article} />
 	<INCLURE{fond=inclure/footer,self=#SELF} />
